@@ -40,6 +40,6 @@ func (dedup *DeDuplicate) DukChk(val string)  bool {
     }
     pre = cur
   }
-  dedup.head=DupNode{value:val,ctime:time.Now().Unix(), next: dedup.head}
+  dedup.head=&DupNode{value:val,ctime:time.Now().Unix(), next: dedup.head}
   return false
 }
