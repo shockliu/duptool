@@ -21,6 +21,7 @@ func NewDeDup(timeset int64,max int) *DeDuplicate{
   return &DeDuplicate{timeOut:timeset,max:max}
 }
 
+// 返回true为重复，否则未重复，且放入缓存比较队列
 func (dedup *DeDuplicate) DukChk(val string)  bool {
   // 检查队列是否有
   var pre *DupNode
